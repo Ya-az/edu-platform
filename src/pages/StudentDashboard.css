@@ -1,0 +1,124 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding-top: 10px;
+}
+
+.dashboard-header {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 4px;
+  padding: 24px 24px 20px;
+  border-radius: 24px;
+  border: 1px solid var(--color-border);
+  background:
+    radial-gradient(circle at top left, rgba(109, 93, 252, 0.16), transparent 0, transparent 28%),
+    radial-gradient(circle at bottom right, rgba(17, 185, 129, 0.14), transparent 0, transparent 24%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.52));
+  box-shadow: var(--color-card-shadow);
+}
+
+[data-theme='dark'] .dashboard-header {
+  background:
+    radial-gradient(circle at top left, rgba(139, 124, 255, 0.18), transparent 0, transparent 28%),
+    radial-gradient(circle at bottom right, rgba(32, 214, 160, 0.14), transparent 0, transparent 24%),
+    linear-gradient(135deg, rgba(10, 17, 32, 0.82), rgba(10, 17, 32, 0.72));
+}
+
+.welcome-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.welcome-section .page-title {
+  margin-bottom: 0;
+}
+
+.dashboard-grid {
+  margin-bottom: 2px;
+}
+
+.dashboard-card {
+  display: block;
+  padding: 28px 24px;
+  cursor: pointer;
+  min-height: 190px;
+  border-radius: 22px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.76), rgba(255, 255, 255, 0.56));
+}
+
+[data-theme='dark'] .dashboard-card {
+  background: linear-gradient(180deg, rgba(10, 17, 32, 0.82), rgba(10, 17, 32, 0.68));
+}
+
+.dashboard-card:hover {
+  transform: translateY(-4px);
+}
+
+.dc-icon {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 14px;
+  border-radius: 16px;
+  background: var(--color-bg-tertiary);
+}
+
+.dc-title {
+  font-size: 1.08rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.dc-desc {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* Upgrade Banner */
+.upgrade-banner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 22px 24px;
+  background: linear-gradient(135deg, var(--color-primary-light), var(--color-warning-light));
+  border: 1px solid rgba(109, 93, 252, 0.24);
+}
+
+.upgrade-icon {
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.upgrade-text {
+  flex: 1;
+}
+
+.upgrade-text h3 {
+  font-size: 1rem;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.upgrade-text p {
+  font-size: 0.88rem;
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 768px) {
+  .dashboard-header,
+  .upgrade-banner {
+    text-align: center;
+  }
+
+  .welcome-section,
+  .upgrade-banner {
+    justify-content: center;
+    flex-direction: column;
+  }
+}

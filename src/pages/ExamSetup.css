@@ -1,0 +1,221 @@
+.exam-setup-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.exam-setup-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.setup-subtitle {
+  color: var(--color-text-secondary);
+  max-width: 720px;
+}
+
+.setup-banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 14px;
+  border-radius: var(--border-radius-sm);
+  border: 1px solid transparent;
+  font-size: 0.92rem;
+}
+
+.setup-banner-warning {
+  background: var(--color-warning-light);
+  color: #9a6700;
+  border-color: rgba(246, 185, 76, 0.3);
+}
+
+.setup-banner-error {
+  background: var(--color-error-light);
+  color: var(--color-error);
+  border-color: rgba(239, 107, 115, 0.24);
+}
+
+.setup-stats .card {
+  padding: 18px;
+}
+
+.stat-label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--color-text-secondary);
+  font-size: 0.85rem;
+}
+
+.stat-value {
+  font-size: 1.6rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.stat-footnote {
+  margin-top: 8px;
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+}
+
+.setup-grid {
+  align-items: start;
+}
+
+.setup-section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.setup-section-title h2,
+.question-bank-header h2 {
+  font-size: 1.05rem;
+}
+
+.setup-note {
+  margin-top: 16px;
+  padding: 13px;
+  background: var(--color-bg-tertiary);
+  border-radius: var(--border-radius-sm);
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  border: 1px solid var(--color-border);
+}
+
+.setup-note p + p {
+  margin-top: 6px;
+}
+
+.readiness-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.readiness-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.readiness-list li:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.readiness-label {
+  color: var(--color-text-secondary);
+  font-size: 0.92rem;
+}
+
+.readiness-value {
+  font-weight: 700;
+}
+
+.question-bank-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.question-bank-header p {
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+.question-preview-list {
+  display: grid;
+  gap: 14px;
+}
+
+.question-preview-card {
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.56);
+  transition: var(--transition);
+}
+
+[data-theme='dark'] .question-preview-card {
+  background: rgba(10, 17, 32, 0.6);
+}
+
+.question-preview-card:hover {
+  transform: translateY(-2px);
+}
+
+.question-preview-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.question-preview-title {
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.question-options {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.question-option {
+  padding: 9px 10px;
+  border-radius: 12px;
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+}
+
+.question-option.correct {
+  border-color: rgba(17, 185, 129, 0.28);
+  background: var(--color-success-light);
+  color: var(--color-success);
+  font-weight: 700;
+}
+
+.question-explanation {
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+}
+
+.question-empty-state {
+  padding: 24px 16px;
+  text-align: center;
+  color: var(--color-text-secondary);
+  background: var(--color-bg);
+  border-radius: var(--border-radius);
+  border: 1px dashed var(--color-border);
+}
+
+.question-empty-state h3 {
+  color: var(--color-text);
+  margin-bottom: 6px;
+}
+
+@media (max-width: 768px) {
+  .exam-setup-header,
+  .question-bank-header,
+  .readiness-list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
