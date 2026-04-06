@@ -16,10 +16,12 @@
   <body>
     <div id="root"></div>
     <script>
-      if (
-        window.location.hostname.endsWith('github.io') &&
-        !window.location.pathname.includes('/docs/')
-      ) {
+      const isGithubPages = window.location.hostname.endsWith('github.io');
+      const usesSourceEntry = !!document.querySelector(
+        'script[type="module"][src*="src/main.jsx"]'
+      );
+
+      if (isGithubPages && usesSourceEntry && !window.location.pathname.includes('/docs/')) {
         const basePath = window.location.pathname.endsWith('/')
           ? window.location.pathname
           : `${window.location.pathname}/`;
